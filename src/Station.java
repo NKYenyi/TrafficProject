@@ -26,11 +26,13 @@ public class Station {
                 }
 
                 public BusTerminal getBusTerminal(String terminalId) {
-                        return busTerminals.get(terminalId);
+
+                    return busTerminals.get(terminalId);
                 }
 
                 public TrainTerminal getTrainTerminal(String terminalId) {
-                        return trainTerminals.get(terminalId);
+
+                    return trainTerminals.get(terminalId);
                 }
 
 

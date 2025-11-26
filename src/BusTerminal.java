@@ -5,13 +5,11 @@ public class BusTerminal {
 
     public BusTerminal(String terminalId) {
         this.terminalId = terminalId;
-        this.waitingCommuters = new LinkedList<>();
+        this.waitingCommuters = new Queue<Commuter>();
     }
 
     public void setTrainTerminal(TrainTerminal trainTerminal) {
 
     }
 
-    private class LinkedList {
-    }
 }

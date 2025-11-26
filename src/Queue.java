@@ -3,6 +3,7 @@ public class Queue<T> {
     private ListRecord head;
     private ListRecord tail;
 
+    private ListRecord iterator;
 
     public Queue() {
         head = null;
@@ -46,6 +47,19 @@ public class Queue<T> {
             rec = rec.next;
         }
         return len;
+    }
+
+    public void initIteration() {
+        iterator = head;
+    }
+
+    public T next() {
+        T result = null;
+        if (iterator != null) {
+            result = iterator.data;
+            iterator = iterator.next;
+        }
+        return result;
     }
 
     public boolean isEmpty() {

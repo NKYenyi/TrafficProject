@@ -9,7 +9,15 @@ public class BusTerminal {
     }
 
     public void setTrainTerminal(TrainTerminal trainTerminal) {
+        this.connectedTrainTerminal = trainTerminal;
+    }
 
+    public Queue<Commuter> commuterList() {
+        return waitingCommuters;
+    }
+
+    public TrainTerminal getTrainTerminal() {
+        return connectedTrainTerminal;
     }
 
 }

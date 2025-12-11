@@ -6,13 +6,15 @@ public class Commuter {
     private double startServiceTime;
     private double endServiceTime;
     private String state;
+    private BusTerminal destination;
 
 
 
-    public Commuter(int id, double arrivalTime) {
+    public Commuter(int id, double arrivalTime, BusTerminal destination) {
         this.id = id;
         this.arrivalTime = arrivalTime;
         this.state = "WAITING";
+        this.destination = destination;
     }
 
 
@@ -47,6 +49,10 @@ public class Commuter {
 
     public int getId() {
         return id;
+    }
+
+    public BusTerminal getDestination() {
+        return destination;
     }
 
 
